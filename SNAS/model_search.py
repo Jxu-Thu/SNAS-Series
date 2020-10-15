@@ -381,6 +381,8 @@ class Network(nn.Module):
                     self.reduce_log_alpha_pre = self.reduce_log_alpha.clone().detach()
 
         if self.snas or self.training:
+            import pdb
+            pdb.set_trace()
             
             if self.args.gen_max_child_flag and not self.training:
                 normal_weights = torch.zeros_like(self.normal_log_alpha).scatter_(1, torch.argmax(self.normal_log_alpha, dim = -1).view(-1,1), 1)
