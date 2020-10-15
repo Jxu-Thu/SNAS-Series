@@ -277,7 +277,8 @@ class Network(nn.Module):
         op_normal = [0, 0, 0]
         op_reduce = [0, 0, 0]
         logits_aux = None
-
+        import pdb
+        pdb.set_trace()
         if not self._resample_layer:
             normal_weights = self._get_weights(self.normal_log_alpha)
             reduce_weights = self._get_weights(self.reduce_log_alpha)
